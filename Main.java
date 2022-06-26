@@ -2,8 +2,11 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     double PLN, USD, EURO, CHC;
+    int wymiana=0;
   
     Scanner sc = new Scanner (System.in);
+    
+   while(wymiana!=13){ 
     System.out.println("Wybierz jedną z opcji");
     System.out.println("1. PLN na $");
     System.out.println("2. PLN na €");
@@ -17,9 +20,9 @@ class Main {
     System.out.println("10. CHF na PLN");
     System.out.println("11. CHF na $");
     System.out.println("12. CHF na €");
-    
-    int wymiana = sc.nextInt();
-    switch (wymiana){
+    System.out.println("13. Wyjście z programu");
+     wymiana = sc.nextInt();
+   switch (wymiana){
       case 1:
         System.out.println("Podaj ilośc PLN");
         PLN = sc.nextDouble();
@@ -153,6 +156,10 @@ class Main {
         }
         
     break;
+     case 13:
+       System.exit(0);
+    break;
+   }
      }
   sc.close();    
     
